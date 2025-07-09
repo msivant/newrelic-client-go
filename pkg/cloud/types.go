@@ -4931,6 +4931,26 @@ type CloudGcpVpcaccessIntegrationInput struct {
 	MetricsPollingInterval int `json:"metricsPollingInterval,omitempty"`
 }
 
+// CloudOciLinkAccountInput - Information required to link a Oci account to a NewRelic account.
+type CloudOciLinkAccountInput struct {
+	// The linked account name.
+	Name string `json:"name"`
+	// The Oci project identifier.
+	TenantId string `json:"tenantId"`
+}
+
+// CloudOciUpdateAccountInput - Information required to update a Oci account to a NewRelic account.
+type CloudOciUpdateAccountInput struct {
+	// Disable the linked account.
+	Disabled bool `json:"disabled,omitempty"`
+	// The linked account identifier.
+	LinkedAccountId int `json:"linkedAccountId"`
+	// The linked account new name.
+	Name string `json:"name,omitempty"`
+	// The Oci tenant identifier.
+	TenantId string `json:"tenantId,omitempty"`
+}
+
 // CloudHealthIntegration - Health Integration
 type CloudHealthIntegration struct {
 	// The object creation date, in epoch (Unix) time
@@ -5251,6 +5271,8 @@ type CloudLinkCloudAccountsInput struct {
 	Azure []CloudAzureLinkAccountInput `json:"azure,omitempty"`
 	// Gcp provider
 	Gcp []CloudGcpLinkAccountInput `json:"gcp,omitempty"`
+	// Oci provider
+	Oci []CloudOciLinkAccountInput `json:"oci,omitempty"`
 }
 
 // CloudLinkedAccount - A cloud account linked to a NewRelic account.
@@ -5930,6 +5952,8 @@ type CloudUpdateCloudAccountsInput struct {
 	Fossa []CloudFossaUpdateAccountInput `json:"fossa,omitempty"`
 	// Gcp provider
 	Gcp []CloudGcpUpdateAccountInput `json:"gcp,omitempty"`
+	// Oci provider
+	Oci []CloudOciUpdateAccountInput `json:"oci,omitempty"`
 }
 
 // CloudVpcIntegration - VPC Integration
