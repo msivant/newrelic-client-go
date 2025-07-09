@@ -5394,10 +5394,10 @@ func (x *CloudLinkedAccount) UnmarshalJSON(b []byte) error {
 
 // CloudOciLinkAccountInput - Information required to link a OCI tenancy to a NewRelic account.
 type CloudOciLinkAccountInput struct {
-    // The linked account name.
-    Name string `json:"name"`
-    // The OCI tenant identifier.
-    TenantId string `json:"tenantId"`
+	// The linked account name.
+	Name string `json:"name"`
+	// The OCI tenant identifier.
+	TenantId string `json:"tenantId"`
 }
 
 // CloudProvider - A cloud services provider.
