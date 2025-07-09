@@ -5252,7 +5252,7 @@ type CloudLinkCloudAccountsInput struct {
 	// Gcp provider
 	Gcp []CloudGcpLinkAccountInput `json:"gcp,omitempty"`
 	// OCI Provider
-    Oci []CloudOciLinkAccountInput `json:"oci,omitempty"`
+	Oci []CloudOciLinkAccountInput `json:"oci,omitempty"`
 }
 
 // CloudLinkedAccount - A cloud account linked to a NewRelic account.
